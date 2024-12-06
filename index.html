@@ -21,6 +21,23 @@
             text-align: center;
         }
 
+        nav {
+            text-align: center;
+            background-color: #388e3c; /* Slightly lighter green */
+            padding: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         main {
             padding: 20px;
         }
@@ -37,13 +54,6 @@
             color: #2e7d32;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
         footer {
             text-align: center;
             background-color: #2e7d32;
@@ -53,6 +63,28 @@
             bottom: 0;
             width: 100%;
         }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .project-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #2e7d32; /* Dark green */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .project-button:hover {
+            background-color: #1b5e20; /* Even darker green */
+        }
     </style>
 </head>
 <body>
@@ -61,28 +93,30 @@
         <h3>Computer Science Major</h3>
     </header>
 
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <main>
-        <section class="section">
+        <section id="about" class="section">
             <h2>About Me</h2>
             <p>Hello! My name is Jonathan. I am a Computer Science Major with a passion for technology, innovation, and learning about the natural world. In my free time, I enjoy exploring nature and finding ways to incorporate sustainability into my projects.</p>
-            <img src="images/nature_about.jpg" alt="Nature Landscape">
         </section>
 
-        <section class="section">
+        <section id="projects" class="section">
             <h2>Projects</h2>
             <div>
-                <h3>Dynamic Web Design</h3>
-                <p>A modern website that incorporates dynamic content and interactive design.</p>
-                <img src="images/nature_projects.jpg" alt="Nature Projects">
-            </div>
-            <div>
-                <h3>Algorithm Visualizer</h3>
-                <p>An interactive tool to demonstrate the inner workings of popular algorithms.</p>
-                <img src="images/forest_code.jpg" alt="Forest Code">
+                <h3>Linked Projects</h3>
+                <div class="button-container">
+                    <a href="PlantingAndPottery.html" target="_blank" class="project-button">Planting and Pottery</a>
+                    <a href="DOMManipulationAndEvents.html" target="_blank" class="project-button">DOM Manipulation and Events</a>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <p>If you'd like to connect or learn more about my work, feel free to reach out!</p>
             <p>Email: <a href="mailto:jonathan@example.com">jonathan@example.com</a></p>
@@ -93,8 +127,6 @@
         <p>&copy; 2024 Jonathan's Portfolio | Inspired by Nature</p>
     </footer>
 </body>
-    <img src="images/nature1.jpg" alt="Nature Image 1">
-<img src="images/nature2.jpg" alt="Nature Image 2">
-
 </html>
+
 
