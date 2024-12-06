@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation and Events - Assignment Solutions</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        h1, h2 { color: #333; }
+        .assignment { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        button { padding: 5px 10px; margin: 5px; }
+        #todoList { list-style-type: none; padding: 0; }
+        #todoList li { margin: 5px 0; padding: 5px; background-color: #f4f4f4; }
+        .delete-btn { margin-left: 10px; color: red; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation and Events - Assignment Solutions</h1>
+
+    <!-- Assignment 1: Selecting DOM Elements -->
+    <div class="assignment">
+        <h2>Assignment 1: Selecting DOM Elements</h2>
+        <p id="para1" class="testClass">This is paragraph 1</p>
+        <p id="para2" class="testClass">This is paragraph 2</p>
+        <button id="changeTextButton">Change Text</button>
+    </div>
+
+    <!-- Assignment 2: Event Handling -->
+    <div class="assignment">
+        <h2>Assignment 2: Event Handling</h2>
+        <button id="colorButton">Change Background Color</button>
+    </div>
+
+    <!-- Assignment 3: Creating New Elements -->
+    <div class="assignment">
+        <h2>Assignment 3: Creating New Elements</h2>
+        <button id="addElementButton">Add New Paragraph</button>
+        <div id="elementContainer"></div>
+    </div>
+
+    <script>
+        // Select elements and modify their text content
+        const changeTextButton = document.getElementById('changeTextButton');
+        
+        // Add click event listener to change the text of paragraphs
+        changeTextButton.addEventListener('click', function() {
+            document.getElementById('para1').textContent = 'Paragraph 1 text is changed!';
+            document.getElementById('para2').textContent = 'Paragraph 2 text is changed!';
+        });
+
+        // Add an event listener to change background color on button click
+        const colorButton = document.getElementById('colorButton');
+        
+        // Add click event listener to change background color
+        colorButton.addEventListener('click', function() {
+            document.body.style.backgroundColor = '#add8e6'; // Set background color to light blue
+        });
+
+        // Add a new paragraph to the DOM when the button is clicked
+        const addElementButton = document.getElementById('addElementButton');
+        const elementContainer = document.getElementById('elementContainer');
+        
+        // Add click event listener to create and add a new paragraph
+        addElementButton.addEventListener('click', function() {
+            const newParagraph = document.createElement('p'); // Create new paragraph element
+            newParagraph.textContent = 'This is a new paragraph added to the container.'; // Set paragraph text
+            elementContainer.appendChild(newParagraph); // Append new paragraph to container
+        });
+    </script>
+</body>
+</html>
